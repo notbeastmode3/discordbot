@@ -1,5 +1,8 @@
 # This example requires the 'members' privileged intents
 
+import os
+from dotenv import load_dotenv
+
 import discord
 from discord.ext import commands
 import random
@@ -64,4 +67,4 @@ async def _bot(ctx):
     """Is the bot cool?"""
     await ctx.send('Yes, the bot is cool.')
 
-bot.run('token')
+bot.run(os.getenv("TOKEN"))
